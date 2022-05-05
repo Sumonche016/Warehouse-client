@@ -30,3 +30,11 @@ code {
 .countries {
   text-align: center;
 }
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+}

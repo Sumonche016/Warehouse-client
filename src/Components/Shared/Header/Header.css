@@ -1,0 +1,16 @@
+.link-header {
+  color: #111 !important;
+
+  font-size: 16px;
+  font-weight: 700px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.manage-header {
+  border: 1px solid #ff4605;
+  border-radius: 5px;
+  display: inline-block;
+}

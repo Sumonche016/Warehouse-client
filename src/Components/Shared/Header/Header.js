@@ -7,17 +7,19 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home" className='link-header'>Car Warehouse</Navbar.Brand>
+                    <Navbar.Brand href="#home">
+                        <img className='logo' src="https://demo.vehica.com/wp-content/uploads/2021/09/vehica-logo-dark-retina.png" alt="" />
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link className='link-header' href="#features">Features</Nav.Link>
-                            <Nav.Link className='link-header' href="#pricing">Pricing</Nav.Link>
+                            <Nav.Link className='link-header' href="#features">Home</Nav.Link>
+                            <Nav.Link className='link-header' href="#pricing">Service</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link className='link-header' href="#deets">More deets</Nav.Link>
-                            <Nav.Link className='link-header' eventKey={2} href="#memes">
-                                Dank memes
+                            <Nav.Link className='link-header' href="#deets">Log In</Nav.Link>
+                            <Nav.Link className='link-header manage-header' eventKey={2} href="#memes">
+                                Manage Items
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
