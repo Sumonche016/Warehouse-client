@@ -3,7 +3,7 @@ import './About.css'
 
 const About = () => {
     return (
-        <div>
+        <div className='py-5'>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">
@@ -17,10 +17,10 @@ const About = () => {
                             <span className='mb-3 second-para'>As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction. How the adventure ended will be seen anon.
                                 Aouda was anxious, though she said nothing.</span>
 
-                            <ul>
-                                <li><i class="fas fa-check-circle"></i>Quality Cars at Guaranteed Prices</li>
-                                <li><i class="fas fa-check-circle"></i>Routine Service Available</li>
-                                <li><i class="fas fa-check-circle"></i>Turn Your Car Into Cash</li>
+                            <ul className='mt-3'>
+                                <li className='mb-2'><i class="me-3 fas fa-check-circle"></i>Quality Cars at Guaranteed Prices</li>
+                                <li className='mb-2'><i class=" me-3 fas fa-check-circle"></i>Routine Service Available</li>
+                                <li className='mb-2'><i class=" me-3 fas fa-check-circle"></i>Turn Your Car Into Cash</li>
                             </ul>
                             <button className='btn'>About Us</button>
                         </div>
