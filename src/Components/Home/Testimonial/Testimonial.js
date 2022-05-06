@@ -21,11 +21,11 @@ const Testimonial = () => {
                                     <img className='image-testi' src="testimonial.jpg" alt="" />
                                 </div>
                                 <div className="star mt-3">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
                                 </div>
 
                                 <div>
