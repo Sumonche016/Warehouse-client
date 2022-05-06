@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../Firebase.init';
+import Social from '../LogIn/Social/Social';
 
 
 
@@ -15,6 +17,7 @@ const CreateUser = () => {
 
     const emailRef = useRef();
     const passRef = useRef();
+    const navigate = useNavigate()
 
     // handle create user
     const handleCReateUser = (event) => {
@@ -24,7 +27,10 @@ const CreateUser = () => {
         const pass = passRef.current.value;
         createUserWithEmailAndPassword(email, pass)
     }
-    console.log(user)
+
+    if (user) {
+        navigate('/')
+    }
     return (
         <div>
             <h1 className='mb-3 text-center'>Sign Up Here</h1>
@@ -44,10 +50,17 @@ const CreateUser = () => {
                     }{
                         loading && <p>loading....</p>
                     }
+
+
                     <button type='submit' className='btn'>Register</button>
+
+                    <p className='naviagte mt-2'> Already have account ? <Link className='naviagte-link' to='/login'>Log in</Link> </p>
+
                 </Form>
 
             </div>
+
+            <Social></Social>
 
         </div>
     );
