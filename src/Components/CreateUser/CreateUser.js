@@ -13,7 +13,7 @@ const CreateUser = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const emailRef = useRef();
     const passRef = useRef();
