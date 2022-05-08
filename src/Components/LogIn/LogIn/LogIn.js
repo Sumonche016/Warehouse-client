@@ -1,10 +1,14 @@
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../../Firebase.init';
 import Social from '../Social/Social';
 import './Login.css'
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const LogIn = () => {
     const [
@@ -13,6 +17,10 @@ const LogIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    const [sendPasswordResetEmail, sending, error2] = useSendPasswordResetEmail(
+        auth
+    );
     const emailRef = useRef()
     const passRef = useRef()
     const navigate = useNavigate()
@@ -33,6 +41,16 @@ const LogIn = () => {
         signInWithEmailAndPassword(email, pass)
     }
 
+    // handle reset password
+    const handleResetPassword = async () => {
+        const email = emailRef.current.value;
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        } else {
+            toast('input your email');
+        }
+    }
 
     if (user) {
         navigate('/')
@@ -53,17 +71,20 @@ const LogIn = () => {
                             <Form.Control ref={passRef} type="password" placeholder="Password" required />
                         </Form.Group>
                         {
-                            error && <p>{error.message}</p>
+                            error && <p className='text-danger'>{error.message}</p>
                         }{
                             loading && <p>loading....</p>
                         }
                         <button type='submit' className='btn'>Log In</button>
                     </Form>
                     <p className='naviagte mt-2'> Not Have Account ? <Link className='naviagte-link' to='/signup'>Register Here</Link> </p>
+                    <p className='naviagte mt-2'> Forget pass ?<button onClick={handleResetPassword} className='forget text-primary'>Reset Here</button> </p>
+
 
                 </div>
 
                 <Social></Social>
+                <ToastContainer></ToastContainer>
 
             </div>
         </div>

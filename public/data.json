@@ -1,44 +1,43 @@
 [
   {
-    "id": 1,
-    "name": "Personalized Nutrition Plan",
+    "quantity": 20,
+    "name": "BMW 8-serie 2-door coupe",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/5.jpg",
-    "price": 100,
-    "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
+    "price": 6200,
+    "description": "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
-    "id": 2,
-    "name": "Personalized Nutrition Plan",
+    "name": "Chevrolet Camaro 2-door",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
     "price": 100,
-    "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
+    "description": "Aouda was anxious, though she said nothing.this is the best car .so my request to buy this As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
-    "id": 3,
-    "name": "Personalized Nutrition Plan",
+    "quantity": 20,
+    "name": "Ferrari LaFerrari 2-door",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/audi3.jpg",
     "price": 100,
-    "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
+    "description": "Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
-    "id": 4,
-    "name": "Personalized Nutrition Plan",
+    "quantity": 20,
+    "name": "Mercedes-Benz S-class 2",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/06/mrec.jpg",
     "price": 100,
-    "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
+    "description": "As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
-    "id": 5,
+    "quantity": 20,
     "name": "Personalized Nutrition Plan",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
     "price": 100,
     "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
   },
   {
-    "id": 6,
-    "name": "Personalized Nutrition Plan",
+    "quantity": 20,
+    "name": "Audi A8 4-door sedan silver",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/6.jpg",
     "price": 100,
-    "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
+    "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
   }
 ]
