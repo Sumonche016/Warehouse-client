@@ -13,7 +13,6 @@ const ManageInventory = () => {
             <h1 className='text-center'>Mange Inventory</h1>
 
             <div>
-
                 {
                     services.map(service => <SingleManage service={service} key={service._id}></SingleManage>)
                 }
