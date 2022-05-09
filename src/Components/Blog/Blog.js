@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 const Blog = () => {
     return (
         <div>
-            <div className="container">
+            <div className="container py-5">
                 <div className="row">
                     <div className="col-md-4">
                         <Card className='mb-4 card'>

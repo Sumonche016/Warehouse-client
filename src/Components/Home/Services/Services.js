@@ -18,7 +18,6 @@ const Services = () => {
                     }
                 </div>
 
-
             </div>
             <div className='d-flex justify-content-center'>
                 <button className=' btn-manage' onClick={() => navigate('/manage-inventory')}>Manage Inventories</button>

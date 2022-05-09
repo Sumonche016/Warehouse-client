@@ -1,9 +1,14 @@
 import React from 'react';
+import useData from '../../Custom-hook/UseData';
+import SingleManage from './SingleManage/SingleManage';
 
 const ManageInventory = () => {
+    const [services, setServices] = useData([])
     return (
-        <div>
-            from manage inventory
+        <div className='py-5'>
+            {
+                services.map(service => <SingleManage service={service} key={service._id}></SingleManage>)
+            }
         </div>
     );
 };
