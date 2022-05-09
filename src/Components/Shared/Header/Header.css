@@ -14,3 +14,7 @@
   border-radius: 5px;
   display: inline-block;
 }
+
+.navbar {
+  border-bottom: 1px solid #ddd;
+}

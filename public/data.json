@@ -1,5 +1,6 @@
 [
   {
+    "supplier": "Toyota",
     "quantity": 20,
     "name": "BMW 8-serie 2-door coupe",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/5.jpg",
@@ -7,12 +8,14 @@
     "description": "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
+    "supplier": "Toyota",
     "name": "Chevrolet Camaro 2-door",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
     "price": 100,
     "description": "Aouda was anxious, though she said nothing.this is the best car .so my request to buy this As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
+    "supplier": "Bmv",
     "quantity": 20,
     "name": "Ferrari LaFerrari 2-door",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/audi3.jpg",
@@ -20,6 +23,7 @@
     "description": "Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
+    "supplier": "Toyota",
     "quantity": 20,
     "name": "Mercedes-Benz S-class 2",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/06/mrec.jpg",
@@ -27,6 +31,7 @@
     "description": "As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
   {
+    "supplier": "Walton",
     "quantity": 20,
     "name": "Personalized Nutrition Plan",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
@@ -34,6 +39,7 @@
     "description": "Sometimes to change diet habits is sufficient for changing the whole lifestyle. Food for body can heal the whole personality by causing a behavioral change.It is very ceap"
   },
   {
+    "supplier": "Runner",
     "quantity": 20,
     "name": "Audi A8 4-door sedan silver",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/6.jpg",
@@ -41,6 +47,7 @@
     "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
   },
   {
+    "supplier": "Toyota",
     "quantity": 20,
     "name": "Mercedes-Benz AMG GT 23",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/2-4.jpg",
@@ -48,6 +55,7 @@
     "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
   },
   {
+    "supplier": "Maruti Suziki",
     "quantity": 55,
     "name": "Mercedes-Benz AMG GT 2",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/02/1-42-1024x683.jpg",

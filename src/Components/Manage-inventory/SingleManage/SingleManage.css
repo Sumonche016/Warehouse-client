@@ -52,7 +52,7 @@
   flex-direction: column;
 }
 
-.manage-button button {
+.btn-simple {
   border: none;
   background-color: #ff4605;
   color: #fff;

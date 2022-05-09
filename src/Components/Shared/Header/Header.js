@@ -14,7 +14,7 @@ const Header = () => {
     };
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="" variant="dark" className='navbar'>
                 <Container>
                     <Navbar.Brand href="#home">
                         <img className='logo' src="https://demo.vehica.com/wp-content/uploads/2021/09/vehica-logo-dark-retina.png" alt="" />

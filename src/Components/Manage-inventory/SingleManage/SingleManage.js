@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const SingleManage = (props) => {
 
     const { _id, name, img, price, description } = props.service;
@@ -38,7 +39,7 @@ const SingleManage = (props) => {
                                 <p className='manage-item-des w-70'>{description}</p>
                             </div>
                             <div className='manage-button'>
-                                <button onClick={() => handleDelete(_id)}>Delete</button>
+                                <button className='btn-simple' onClick={() => handleDelete(_id)}>Delete</button>
                                 <h1 className='manage-price'>${price}</h1>
                             </div>
                         </div>
