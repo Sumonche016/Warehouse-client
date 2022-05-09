@@ -22,7 +22,7 @@ const Additem = () => {
         const price = priceRef.current.value;
         const data = { name, img, des, price }
 
-        const url = `http://localhost:5000/add-item`;
+        const url = `https://boiling-shelf-19002.herokuapp.com/add-item`;
         fetch(url, {
             method: "POST",
             headers: {

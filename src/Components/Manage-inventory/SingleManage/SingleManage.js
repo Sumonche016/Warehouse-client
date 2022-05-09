@@ -12,7 +12,7 @@ const SingleManage = (props) => {
     const handleDelete = (id) => {
         const confirm = window.confirm('are you sure to delete?')
         if (confirm) {
-            const url = `http://localhost:5000/manage-inventory/${id}`
+            const url = `https://boiling-shelf-19002.herokuapp.com/manage-inventory/${id}`
             fetch(url, {
                 method: "DELETE"
             })

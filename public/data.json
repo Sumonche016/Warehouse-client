@@ -7,8 +7,10 @@
     "price": 6200,
     "description": "How the adventure ended will be seen anon. Aouda was anxious, though she said nothing. As for Passepartout, he thought Mr. Fogg’s manoeuvre simply glorious. The captain had said “between eleven and twelve knots,” and the Henrietta confirmed his prediction."
   },
+
   {
     "supplier": "Toyota",
+    "quantity": 20,
     "name": "Chevrolet Camaro 2-door",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
     "price": 100,
@@ -24,7 +26,7 @@
   },
   {
     "supplier": "Toyota",
-    "quantity": 20,
+    "quantity": 70,
     "name": "Mercedes-Benz S-class 2",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/06/mrec.jpg",
     "price": 100,
@@ -32,7 +34,7 @@
   },
   {
     "supplier": "Walton",
-    "quantity": 20,
+    "quantity": 29,
     "name": "Personalized Nutrition Plan",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/09/car-red.jpg",
     "price": 100,
@@ -40,7 +42,7 @@
   },
   {
     "supplier": "Runner",
-    "quantity": 20,
+    "quantity": 12,
     "name": "Audi A8 4-door sedan silver",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/6.jpg",
     "price": 100,
@@ -48,7 +50,7 @@
   },
   {
     "supplier": "Toyota",
-    "quantity": 20,
+    "quantity": 67,
     "name": "Mercedes-Benz AMG GT 23",
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/2-4.jpg",
     "price": 100,
