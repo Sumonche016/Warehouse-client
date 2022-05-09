@@ -1,3 +1,15 @@
 .service-area {
   background-color: #f8f7f7;
 }
+
+.btn-manage {
+  background-color: #ff4605;
+  padding: 8px 1rem;
+  color: #fff;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

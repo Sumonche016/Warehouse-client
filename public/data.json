@@ -39,5 +39,19 @@
     "img": "https://demo.vehica.com/wp-content/uploads/2020/08/6.jpg",
     "price": 100,
     "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
+  },
+  {
+    "quantity": 20,
+    "name": "Mercedes-Benz AMG GT 23",
+    "img": "https://demo.vehica.com/wp-content/uploads/2020/08/2-4.jpg",
+    "price": 100,
+    "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
+  },
+  {
+    "quantity": 55,
+    "name": "Mercedes-Benz AMG GT 2",
+    "img": "https://demo.vehica.com/wp-content/uploads/2020/02/1-42-1024x683.jpg",
+    "price": 100,
+    "description": "If, then—for there were “ifs” still—the sea did not become too boisterous, if the wind did not veer round to the east, if no accident happened to the boat or its machinery, the Henrietta might cross the three…"
   }
 ]
