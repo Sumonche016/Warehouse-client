@@ -9,6 +9,7 @@ import NotFound from './Components/NotFound/NotFound';
 import ServiceDetail from './Components/ServiceDetails/ServiceDetail';
 import RequireAuth from './Components/LogIn/RequireAuth/RequireAuth';
 import Blog from './Components/Blog/Blog';
+import ManageInventory from './Components/Manage-inventory/ManageInventory';
 
 
 
@@ -26,12 +27,12 @@ const App = () => {
             <ServiceDetail></ServiceDetail>
           </RequireAuth>
         }></Route>
-
         <Route path='/blog' element={<Blog></Blog>}></Route>
+        <Route path='/manage-inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
-    </div>
+    </div >
   );
 };
 

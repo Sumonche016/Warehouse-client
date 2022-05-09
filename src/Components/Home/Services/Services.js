@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useData from '../../../Custom-hook/UseData';
 import Service from '../Service/Service';
 import './services.css'
 
 const Services = () => {
-    const [services, setServices] = useState([])
-    useEffect(() => {
-        fetch('https://boiling-shelf-19002.herokuapp.com/service')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+    const [services] = useData();
+
+    const navigate = useNavigate()
 
     return (
         <div className='py-5 service-area'>
@@ -22,8 +21,7 @@ const Services = () => {
 
             </div>
             <div className='d-flex justify-content-center'>
-                <button className=' btn-manage'>Manage Inventories</button>
-
+                <button className=' btn-manage' onClick={() => navigate('/manage-inventory')}>Manage Inventories</button>
             </div>
         </div>
     );
