@@ -1,8 +1,28 @@
 import React from 'react';
-import './SingleManage.css'
+import './SingleManage.css';
+import { ToastContainer, toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 const SingleManage = (props) => {
 
-    const { name, img, price, description } = props.service;
+    const { _id, name, img, price, description } = props.service;
+
+    const handleDelete = (id) => {
+        const confirm = window.confirm('are you sure to delete?')
+        if (confirm) {
+            const url = `http://localhost:5000/manage-inventory/${id}`
+            fetch(url, {
+                method: "DELETE"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        toast('Deleted')
+                    }
+                })
+        }
+    }
 
     return (
         <div>
@@ -18,10 +38,11 @@ const SingleManage = (props) => {
                                 <p className='manage-item-des w-70'>{description}</p>
                             </div>
                             <div className='manage-button'>
-                                <button>Delete</button>
+                                <button onClick={() => handleDelete(_id)}>Delete</button>
                                 <h1 className='manage-price'>${price}</h1>
                             </div>
                         </div>
+                        <ToastContainer></ToastContainer>
                     </div>
                 </div>
             </div>

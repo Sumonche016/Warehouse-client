@@ -7,7 +7,9 @@ const ServiceDetail = () => {
     const [service, setService] = useState({})
     console.log(service)
     useEffect(() => {
-        const url = `https://boiling-shelf-19002.herokuapp.com/inventory/${id}`;
+
+        // const url = `https://boiling-shelf-19002.herokuapp.com/inventory/${id}`;
+        const url = `http://localhost:5000/inventory/${id}`;
         console.log(url)
         fetch(url)
             .then(res => res.json())

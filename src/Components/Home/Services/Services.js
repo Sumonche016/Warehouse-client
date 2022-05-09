@@ -6,9 +6,7 @@ import './services.css'
 
 const Services = () => {
     const [services] = useData();
-
     const navigate = useNavigate()
-
     return (
         <div className='py-5 service-area'>
             <div className="container">

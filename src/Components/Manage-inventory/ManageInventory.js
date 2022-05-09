@@ -3,7 +3,7 @@ import useData from '../../Custom-hook/UseData';
 import SingleManage from './SingleManage/SingleManage';
 
 const ManageInventory = () => {
-    const [services, setServices] = useData([])
+    const [services] = useData([])
     return (
         <div className='py-5'>
             {
