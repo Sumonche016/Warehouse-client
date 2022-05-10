@@ -2,12 +2,15 @@ import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
 import './Additem.css'
 import { ToastContainer, toast } from 'react-toastify';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 import 'react-toastify/dist/ReactToastify.css';
-
+import auth from '../../../Firebase.init';
+import axios from 'axios';
 
 const Additem = () => {
-
+    const [user] = useAuthState(auth);
+    console.log(user)
     const nameRef = useRef()
     const imgRef = useRef()
     const supplierRef = useRef()
@@ -19,8 +22,16 @@ const Additem = () => {
         const name = nameRef.current.value;
         const img = imgRef.current.value;
         const des = desRef.current.value;
+        const supplier = supplierRef.current.value;
         const price = priceRef.current.value;
-        const data = { name, img, des, price }
+        const email = user.email;
+
+        const data = { name, img, des, price, email, supplier }
+
+        axios.post('https://boiling-shelf-19002.herokuapp.com/order', data)
+            .then(response => {
+                console.log(response)
+            })
 
         const url = `https://boiling-shelf-19002.herokuapp.com/add-item`;
         fetch(url, {
@@ -36,6 +47,7 @@ const Additem = () => {
                 if (data) {
                     toast('Add Successful')
                     nameRef.current.value = ''
+                    supplierRef.current.value = ''
                     imgRef.current.value = ''
                     desRef.current.value = ''
                     priceRef.current.value = ''
@@ -63,6 +75,9 @@ const Additem = () => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control ref={priceRef} type="Number" placeholder="Price $" />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicPassword">
+                            <Form.Control type="email" value={user?.email} disabled />
                         </Form.Group>
 
                         <button className='btn' type='submit'>Submit</button>

@@ -8,6 +8,8 @@ import auth from '../../../Firebase.init';
 import Social from '../Social/Social';
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import Loading from '../../Shared/Loading/Loading'
 
 
 const LogIn = () => {
@@ -34,11 +36,14 @@ const LogIn = () => {
     }
 
     // log in handle
-    const handleLogin = (event) => {
+    const handleLogin = async event => {
         event.preventDefault()
         const email = emailRef.current.value;
         const pass = passRef.current.value;
-        signInWithEmailAndPassword(email, pass)
+        await signInWithEmailAndPassword(email, pass)
+        const { data } = await axios.post('https://boiling-shelf-19002.herokuapp.com/login', { email })
+        localStorage.setItem('accesToken', data.acesstoken)
+        navigate(from, { replace: true })
     }
 
     // handle reset password
@@ -51,10 +56,10 @@ const LogIn = () => {
             toast('input your email');
         }
     }
-
-    if (user) {
-        navigate('/')
+    if (loading) {
+        return <Loading></Loading>
     }
+
     return (
         <div>
             <div>
@@ -72,8 +77,6 @@ const LogIn = () => {
                         </Form.Group>
                         {
                             error && <p className='text-danger'>{error.message}</p>
-                        }{
-                            loading && <p>loading....</p>
                         }
                         <button type='submit' className='btn'>Log In</button>
                     </Form>

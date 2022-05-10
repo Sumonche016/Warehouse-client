@@ -5,14 +5,21 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
+
+
+
 const SingleManage = (props) => {
 
+
     const { _id, name, img, price, description } = props.service;
+
+
 
     const handleDelete = (id) => {
         const confirm = window.confirm('are you sure to delete?')
         if (confirm) {
             const url = `https://boiling-shelf-19002.herokuapp.com/manage-inventory/${id}`
+
             fetch(url, {
                 method: "DELETE"
             })
@@ -29,8 +36,8 @@ const SingleManage = (props) => {
         <div>
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12 ">
-                        <div className='d-flex single-manage-container  mb-2 p-3'>
+                    <div className="col-md-12">
+                        <div className='d-flex single-manage-container mb-2 p-3'>
                             <div>
                                 <img className='img-manage' src={img} alt="" />
                             </div>
@@ -43,8 +50,9 @@ const SingleManage = (props) => {
                                 <h1 className='manage-price'>${price}</h1>
                             </div>
                         </div>
-                        <ToastContainer></ToastContainer>
+
                     </div>
+                    <ToastContainer></ToastContainer>
                 </div>
             </div>
         </div>

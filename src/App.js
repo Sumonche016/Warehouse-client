@@ -11,6 +11,8 @@ import RequireAuth from './Components/LogIn/RequireAuth/RequireAuth';
 import Blog from './Components/Blog/Blog';
 import ManageInventory from './Components/Manage-inventory/ManageInventory';
 import Additem from './Components/Manage-inventory/Additem/Additem';
+import { ToastContainer } from 'react-toastify';
+import MyItem from './Components/My-Item/MyItem';
 
 
 
@@ -30,10 +32,12 @@ const App = () => {
         }></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/add-item' element={<Additem></Additem>}></Route>
+        <Route path='/my-item' element={<MyItem></MyItem>}></Route>
         <Route path='/manage-inventory' element={<ManageInventory></ManageInventory>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </div >
   );
 };

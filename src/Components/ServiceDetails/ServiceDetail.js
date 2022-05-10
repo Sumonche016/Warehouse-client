@@ -1,58 +1,89 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 const ServiceDetail = () => {
     const { id } = useParams()
 
     const [service, setService] = useState({})
+    const [reload, setReload] = useState(true);
+
+
 
     useEffect(() => {
-
         const url = `https://boiling-shelf-19002.herokuapp.com/inventory/${id}`;
-
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
-
-    }, [])
+    }, [reload])
 
     const { description, img, name, quantity, supplier } = service;
 
 
-    // restock 
-
-    const numberRef = useRef()
-    const reStock = (event) => {
-        event.preventDefault()
-        const inputNumber = numberRef.current.value;
-        const parseNumber = parseInt(inputNumber)
-        // console.log(parseNumber, typeof (parseNumber))
-
-        const oldQuantity = parseInt(service.quantity);
-        // console.log(oldQuantity, typeof (oldQuantity))
 
 
-        const newQuantity = parseNumber + oldQuantity
+    // update 
+    const handleDelivered = () => {
 
-
-        const quantity = { newQuantity };
+        const quantity = (service.quantity) - 1;
+        const newQuantity = quantity
 
         const url = `https://boiling-shelf-19002.herokuapp.com/inventory/${id}`;
-        console.log(id)
+
         fetch(url, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(quantity)
+            body: JSON.stringify({ quantity: newQuantity })
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                if (data.acknowledged == true) {
+                    toast('success')
+
+                    numberRef.current.value = ''
+                    setReload(!reload);
+                }
+
             })
     }
 
+
+    // restock 
+    const numberRef = useRef()
+    const reStock = (event) => {
+        event.preventDefault()
+        const inputNumber = numberRef.current.value;
+        const parseNumber = parseInt(inputNumber)
+        const oldQuantity = parseInt(service.quantity);
+        const newQuantity = parseNumber + oldQuantity
+
+        const url = `https://boiling-shelf-19002.herokuapp.com/inventory/${id}`;
+
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ quantity: newQuantity })
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.acknowledged == true) {
+                    toast('success')
+
+                    numberRef.current.value = ''
+                    setReload(!reload);
+                }
+
+            })
+        console.log(service)
+
+    }
+
+    // deliverd 
 
 
 
@@ -70,7 +101,7 @@ const ServiceDetail = () => {
                                 <p className='first-para'>{description}</p>
                                 <p>Quantity :{quantity} pics</p>
                                 <p>Supplier :{supplier}</p>
-                                <button className='btn'>Delivered</button>
+                                <button className='btn' onClick={handleDelivered}>Delivered</button>
                             </div>
                         </div>
                     </div>

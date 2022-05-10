@@ -3,16 +3,19 @@ import React from 'react';
 import './Social.css'
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase.init'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 const Social = () => {
     const [signInWithGoogle, user, , error] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
+    let location = useLocation()
+    let from = location?.state?.from?.pathname || '/';
 
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
+
     return (
         <div>
             <div>

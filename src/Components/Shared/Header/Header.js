@@ -28,16 +28,22 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-                            <Nav.Link className='link-header' as={Link} to='/signup'>Sign Up</Nav.Link>
 
                             {
-                                user ? <Nav.Link className='link-header' onClick={logout}>Sign Out</Nav.Link>
-                                    : <Nav.Link className='link-header' as={Link} to='/login'>Log In</Nav.Link>
+                                user ? <>
+                                    <Nav.Link className='link-header' onClick={logout}>Sign Out</Nav.Link>
+                                    <Nav.Link className='link-header' as={Link} to='/my-item'>My item</Nav.Link>
+                                    <Nav.Link className='link-header' as={Link} to='/add-item'>Add Item</Nav.Link>
+                                    <Nav.Link className='link-header manage-header' as={Link} to='/manage-inventory' >
+                                        Manage Items
+                                    </Nav.Link>
+                                </>
+                                    : <><Nav.Link className='link-header' as={Link} to='/login'>Log In</Nav.Link>
+                                        <Nav.Link className='link-header' as={Link} to='/signup'>Sign Up</Nav.Link></>
+
 
                             }
-                            <Nav.Link className='link-header manage-header' eventKey={2} href="#memes">
-                                Manage Items
-                            </Nav.Link>
+
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
